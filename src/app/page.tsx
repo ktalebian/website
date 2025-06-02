@@ -20,31 +20,30 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="bg-black min-h-screen flex flex-col relative overflow-hidden">
+    <div className="bg-gray-100 min-h-screen flex flex-col relative overflow-hidden">
       {/* iOS Wallpaper Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900"></div>
-      <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-gray-100 to-gray-300"></div>
       
       {/* Dynamic Island */}
       <div className="absolute top-2 left-1/2 transform -translate-x-1/2 w-32 h-9 bg-black rounded-full z-10"></div>
       
       {/* iOS Status Bar */}
-      <div className="relative z-20 flex justify-between items-center px-6 pt-4 pb-1 text-white text-sm font-semibold">
+      <div className="relative z-20 flex justify-between items-center px-6 pt-4 pb-1 text-black text-sm font-semibold">
         <div className="font-bold text-base tracking-tight">
           {currentTime}
         </div>
         <div className="flex items-center gap-1">
           <div className="flex gap-0.5 items-end">
-            <div className="w-1 h-1 bg-white rounded-sm"></div>
-            <div className="w-1 h-2 bg-white rounded-sm"></div>
-            <div className="w-1 h-3 bg-white rounded-sm"></div>
-            <div className="w-1 h-4 bg-white/40 rounded-sm"></div>
+            <div className="w-1 h-1 bg-black rounded-sm"></div>
+            <div className="w-1 h-2 bg-black rounded-sm"></div>
+            <div className="w-1 h-3 bg-black rounded-sm"></div>
+            <div className="w-1 h-4 bg-black/40 rounded-sm"></div>
           </div>
           <div className="ml-2 flex items-center">
-            <div className="w-6 h-3 border border-white rounded-sm relative">
+            <div className="w-6 h-3 border border-black rounded-sm relative">
               <div className="absolute inset-0.5 w-3 bg-green-500 rounded-sm"></div>
             </div>
-            <div className="w-0.5 h-1.5 bg-white rounded-r-sm ml-0.5"></div>
+            <div className="w-0.5 h-1.5 bg-black rounded-r-sm ml-0.5"></div>
           </div>
         </div>
       </div>
@@ -53,8 +52,8 @@ export default function Home() {
       <div className="relative z-10 flex-1 px-6 pt-8">
         <div className="grid grid-cols-6 gap-6 max-w-lg mx-auto">
           {/* App Icon - Messages */}
-          <div className="flex flex-col items-center">
-            <div className="w-14 h-14 rounded-xl shadow-lg relative">
+          <div className="flex flex-col items-center cursor-pointer group">
+            <div className="w-14 h-14 rounded-xl shadow-lg relative transform transition-all duration-200 group-hover:scale-110 group-hover:shadow-xl">
               <div className="absolute inset-0 bg-gradient-to-br from-green-400 to-green-600 rounded-xl"></div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <svg className="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
@@ -62,30 +61,30 @@ export default function Home() {
                 </svg>
               </div>
             </div>
-            <span className="text-white text-xs mt-1 font-normal">Messages</span>
+            <span className="text-black text-xs mt-1 font-normal">Messages</span>
           </div>
           
           {/* App Icon - Settings */}
-          <div className="flex flex-col items-center">
-            <div className="w-14 h-14 rounded-xl shadow-lg relative">
+          <div className="flex flex-col items-center cursor-pointer group">
+            <div className="w-14 h-14 rounded-xl shadow-lg relative transform transition-all duration-200 group-hover:scale-110 group-hover:shadow-xl">
               <div className="absolute inset-0 bg-gradient-to-br from-gray-400 to-gray-600 rounded-xl"></div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <svg className="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61 l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41 h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.59,8.12,5.92,7.63,6.29L5.24,5.33c-0.22-0.08-0.47,0-0.59,0.22L2.74,8.87 C2.62,9.08,2.66,9.34,2.86,9.48l2.03,1.58C4.84,11.36,4.8,11.69,4.8,12s0.02,0.64,0.07,0.94l-2.03,1.58 c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54 c0.05,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96 c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6 s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z"/>
+                  <path d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61 l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41 h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.59,8.12,5.92,7.63,6.29L5.24,5.33c-0.22-0.08-0.47,0-0.59,0.22L2.74,8.87 C2.62,9.08,2.66,9.34,2.86,9.48l2.03,1.58C4.84,11.36,4.8,11.69,4.8,12s0.02,0.64,0.07,0.94l-2.03,1.58 c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54 c0.05,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96 c0.22,0.08,0.47,0.47,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6 s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z"/>
                 </svg>
               </div>
             </div>
-            <span className="text-white text-xs mt-1 font-normal">Settings</span>
+            <span className="text-black text-xs mt-1 font-normal">Settings</span>
           </div>
         </div>
       </div>
 
       {/* iOS Dock */}
       <div className="relative z-10 px-6 pb-6">
-        <div className="bg-white/10 backdrop-blur-3xl rounded-2xl p-3 max-w-lg mx-auto border border-white/20 shadow-2xl">
+        <div className="bg-white/60 backdrop-blur-3xl rounded-2xl p-3 max-w-lg mx-auto border border-gray-300/50 shadow-2xl">
           <div className="flex justify-center items-center gap-6">
             {/* Phone */}
-            <div className="w-12 h-12 rounded-xl shadow-lg relative">
+            <div className="w-12 h-12 rounded-xl shadow-lg relative cursor-pointer transform transition-all duration-200 hover:scale-110 hover:shadow-xl">
               <div className="absolute inset-0 bg-gradient-to-br from-green-400 to-green-600 rounded-xl"></div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
@@ -95,7 +94,7 @@ export default function Home() {
             </div>
             
             {/* Safari */}
-            <div className="w-12 h-12 rounded-xl shadow-lg relative">
+            <div className="w-12 h-12 rounded-xl shadow-lg relative cursor-pointer transform transition-all duration-200 hover:scale-110 hover:shadow-xl">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl"></div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
@@ -105,7 +104,7 @@ export default function Home() {
             </div>
             
             {/* Mail */}
-            <div className="w-12 h-12 rounded-xl shadow-lg relative">
+            <div className="w-12 h-12 rounded-xl shadow-lg relative cursor-pointer transform transition-all duration-200 hover:scale-110 hover:shadow-xl">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl"></div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
@@ -115,7 +114,7 @@ export default function Home() {
             </div>
             
             {/* Music */}
-            <div className="w-12 h-12 rounded-xl shadow-lg relative">
+            <div className="w-12 h-12 rounded-xl shadow-lg relative cursor-pointer transform transition-all duration-200 hover:scale-110 hover:shadow-xl">
               <div className="absolute inset-0 bg-gradient-to-br from-pink-500 to-red-600 rounded-xl"></div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
@@ -125,7 +124,7 @@ export default function Home() {
             </div>
             
             {/* Camera */}
-            <div className="w-12 h-12 rounded-xl shadow-lg relative">
+            <div className="w-12 h-12 rounded-xl shadow-lg relative cursor-pointer transform transition-all duration-200 hover:scale-110 hover:shadow-xl">
               <div className="absolute inset-0 bg-gradient-to-br from-gray-500 to-gray-700 rounded-xl"></div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
@@ -135,7 +134,7 @@ export default function Home() {
             </div>
             
             {/* Calculator */}
-            <div className="w-12 h-12 rounded-xl shadow-lg relative">
+            <div className="w-12 h-12 rounded-xl shadow-lg relative cursor-pointer transform transition-all duration-200 hover:scale-110 hover:shadow-xl">
               <div className="absolute inset-0 bg-gradient-to-br from-orange-500 to-orange-700 rounded-xl"></div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">

@@ -1,54 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
-  const [currentTime, setCurrentTime] = useState("9:41");
-
-  useEffect(() => {
-    const updateTime = () => {
-      const now = new Date();
-      const hours = now.getHours();
-      const minutes = now.getMinutes();
-      const formattedTime = `${hours}:${minutes.toString().padStart(2, "0")}`;
-      setCurrentTime(formattedTime);
-    };
-
-    updateTime();
-    const interval = setInterval(updateTime, 60000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <div className="bg-gray-100 min-h-screen flex flex-col relative overflow-hidden">
-      {/* iOS Wallpaper Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-100 to-gray-300"></div>
-
-      {/* Dynamic Island */}
-      <div className="absolute top-2 left-1/2 transform -translate-x-1/2 w-32 h-9 bg-black rounded-full z-10"></div>
-
-      {/* iOS Status Bar */}
-      <div className="relative z-20 flex justify-between items-center px-6 pt-4 pb-1 text-black text-sm font-semibold">
-        <div className="font-bold text-base tracking-tight">{currentTime}</div>
-        <div className="flex items-center gap-1">
-          <div className="flex gap-0.5 items-end">
-            <div className="w-1 h-1 bg-black rounded-sm"></div>
-            <div className="w-1 h-2 bg-black rounded-sm"></div>
-            <div className="w-1 h-3 bg-black rounded-sm"></div>
-            <div className="w-1 h-4 bg-black/40 rounded-sm"></div>
-          </div>
-          <div className="ml-2 flex items-center">
-            <div className="w-6 h-3 border border-black rounded-sm relative">
-              <div className="absolute inset-0.5 w-3 bg-green-500 rounded-sm"></div>
-            </div>
-            <div className="w-0.5 h-1.5 bg-black rounded-r-sm ml-0.5"></div>
-          </div>
-        </div>
-      </div>
-
+    <div className="flex-1 flex flex-col">
       <div className="relative z-10 flex-1 px-6 pt-8">
+        {/* About Me Widget */}
         <div className="max-w-lg mx-auto mb-8">
           <div className="bg-white/60 backdrop-blur-3xl rounded-2xl p-6 border border-gray-300/50 shadow-lg cursor-pointer transform transition-all duration-200 hover:scale-[1.02] hover:shadow-xl">
             <div className="flex items-start gap-4">

@@ -1,13 +1,16 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import PDFModal from "@/components/PDFModal";
 
 export default function Home() {
+  const [isPDFModalOpen, setIsPDFModalOpen] = useState(false);
+
   return (
     <div className="flex-1 flex flex-col">
       <div className="relative z-10 flex-1 px-6 pt-8">
-        {/* About Me Widget */}
         <div className="max-w-lg mx-auto mb-8">
           <div className="bg-white/60 backdrop-blur-3xl rounded-2xl p-6 border border-gray-300/50 shadow-lg cursor-pointer transform transition-all duration-200 hover:scale-[1.02] hover:shadow-xl">
             <div className="flex items-start gap-4">
@@ -29,9 +32,9 @@ export default function Home() {
                   Hey there! 👋 I&apos;m Kousha Talebian, an Iranian Canadian
                   with a Physics and Biomedical Engineering background.
                   I&apos;ve been coding for 10+ years and love building
-                  solutions that work. I love to travel (35+ countriesvisited!)
-                  and cook in the kitchen. Excited to share projects I&apos;ve
-                  been working on, and to connect with other tinkerers.
+                  solutions that work. I love to travel (35+ countries) and cook
+                  in the kitchen. Excited to share projects I&apos;ve been
+                  working on, and to connect with other tinkerers.
                 </p>
                 <div className="flex flex-col gap-3 mt-4">
                   <div className="flex items-center gap-2">
@@ -178,7 +181,10 @@ export default function Home() {
             <div className="w-px h-12 bg-gray-400/30 mx-2"></div>
 
             {/* Resume */}
-            <div className="w-12 h-12 rounded-xl shadow-lg relative cursor-pointer transform transition-all duration-200 hover:scale-110 hover:shadow-xl">
+            <div
+              className="w-12 h-12 rounded-xl shadow-lg relative cursor-pointer transform transition-all duration-200 hover:scale-110 hover:shadow-xl"
+              onClick={() => setIsPDFModalOpen(true)}
+            >
               <div className="absolute inset-0 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl"></div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <svg
@@ -198,6 +204,14 @@ export default function Home() {
           <div className="w-32 h-1 bg-white/60 rounded-full"></div>
         </div>
       </div>
+
+      {/* PDF Modal */}
+      <PDFModal
+        isOpen={isPDFModalOpen}
+        onCloseAction={() => setIsPDFModalOpen(false)}
+        pdfUrl="/resume.pdf"
+        title="Kousha Talebian - Resume"
+      />
     </div>
   );
 }

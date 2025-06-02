@@ -22,8 +22,23 @@ export default function IOSLayout({ children }: IOSLayoutProps) {
     };
 
     updateTime();
-    const interval = setInterval(updateTime, 60000);
-    return () => clearInterval(interval);
+
+    const now = new Date();
+    const msUntilNextMinute =
+      (60 - now.getSeconds()) * 1000 - now.getMilliseconds();
+
+    let interval: NodeJS.Timeout | undefined;
+    const initialTimeout = setTimeout(() => {
+      updateTime();
+      interval = setInterval(updateTime, 60000);
+    }, msUntilNextMinute);
+
+    return () => {
+      clearTimeout(initialTimeout);
+      if (interval) {
+        clearInterval(interval);
+      }
+    };
   }, []);
 
   return (

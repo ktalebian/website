@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   const [currentTime, setCurrentTime] = useState("9:41");
@@ -51,9 +53,11 @@ export default function Home() {
           <div className="bg-white/60 backdrop-blur-3xl rounded-2xl p-6 border border-gray-300/50 shadow-lg cursor-pointer transform transition-all duration-200 hover:scale-[1.02] hover:shadow-xl">
             <div className="flex items-start gap-4">
               <div className="w-20 h-20 rounded-full shadow-lg flex-shrink-0 overflow-hidden">
-                <img 
-                  src="/kousha.webp" 
-                  alt="Kousha Talebian" 
+                <Image
+                  src="/kousha.webp"
+                  alt="Kousha Talebian"
+                  width={80}
+                  height={80}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -195,19 +199,21 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Camera */}
-            <div className="w-12 h-12 rounded-xl shadow-lg relative cursor-pointer transform transition-all duration-200 hover:scale-110 hover:shadow-xl">
-              <div className="absolute inset-0 bg-gradient-to-br from-gray-500 to-gray-700 rounded-xl"></div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <svg
-                  className="w-6 h-6 text-white"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" />
-                </svg>
+            {/* Contacts */}
+            <Link href="/contacts">
+              <div className="w-12 h-12 rounded-xl shadow-lg relative cursor-pointer transform transition-all duration-200 hover:scale-110 hover:shadow-xl">
+                <div className="absolute inset-0 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl"></div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <svg
+                    className="w-6 h-6 text-white"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path d="M19,3H5C3.9,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.9 20.1,3 19,3M12,6A3,3 0 0,1 15,9A3,3 0 0,1 12,12A3,3 0 0,1 9,9A3,3 0 0,1 12,6M19,19H5V17.5C5,15.56 8.94,14.5 12,14.5C15.06,14.5 19,15.56 19,17.5V19Z" />
+                  </svg>
+                </div>
               </div>
-            </div>
+            </Link>
 
             {/* Divider */}
             <div className="w-px h-12 bg-gray-400/30 mx-2"></div>

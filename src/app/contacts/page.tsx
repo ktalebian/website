@@ -39,7 +39,7 @@ export default function Contacts() {
             {/* Email */}
             <div
               className="p-4 hover:bg-white/30 transition-colors cursor-pointer"
-              onClick={() => copyToClipboard("kousha@example.com", "email")}
+              onClick={() => copyToClipboard("k@ousha.me", "email")}
             >
               <div className="flex items-center gap-4">
                 <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center">
@@ -55,7 +55,7 @@ export default function Contacts() {
                   <p className="text-gray-600 text-xs uppercase tracking-wide">
                     Email
                   </p>
-                  <p className="text-black font-medium">kousha@example.com</p>
+                  <p className="text-black font-medium">k@ousha.me</p>
                 </div>
                 {copied === "email" && (
                   <span className="text-green-600 text-sm font-medium">
@@ -65,10 +65,9 @@ export default function Contacts() {
               </div>
             </div>
 
-            {/* Phone */}
             <div
               className="p-4 hover:bg-white/30 transition-colors cursor-pointer"
-              onClick={() => copyToClipboard("+1 (555) 123-4567", "phone")}
+              onClick={() => copyToClipboard("+17786519569", "phone")}
             >
               <div className="flex items-center gap-4">
                 <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center">
@@ -84,7 +83,7 @@ export default function Contacts() {
                   <p className="text-gray-600 text-xs uppercase tracking-wide">
                     Phone
                   </p>
-                  <p className="text-black font-medium">+1 (555) 123-4567</p>
+                  <p className="text-black font-medium">+1 (778) 651-9569</p>
                 </div>
                 {copied === "phone" && (
                   <span className="text-green-600 text-sm font-medium">
@@ -94,7 +93,6 @@ export default function Contacts() {
               </div>
             </div>
 
-            {/* LinkedIn */}
             <div className="p-4 hover:bg-white/30 transition-colors cursor-pointer">
               <a
                 href="https://linkedin.com/in/koushatalebian"

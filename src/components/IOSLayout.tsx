@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 interface IOSLayoutProps {
@@ -8,6 +10,7 @@ interface IOSLayoutProps {
 
 export default function IOSLayout({ children }: IOSLayoutProps) {
   const [currentTime, setCurrentTime] = useState("9:41");
+  const pathname = usePathname();
 
   useEffect(() => {
     const updateTime = () => {
@@ -48,6 +51,15 @@ export default function IOSLayout({ children }: IOSLayoutProps) {
       </div>
 
       <div className="flex-1 flex flex-col">{children}</div>
+      {pathname !== "/" && (
+        <Link href="/">
+          <div className="relative z-10 px-6 pb-6 pt-4 cursor-pointer">
+            <div className="flex justify-center">
+              <div className="w-32 h-1 bg-black/60 rounded-full hover:bg-black/80 transition-colors"></div>
+            </div>
+          </div>
+        </Link>
+      )}
     </div>
   );
 }

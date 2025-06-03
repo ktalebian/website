@@ -15,49 +15,31 @@ interface Project {
 }
 
 export default function Projects() {
-  // Sample projects data - you can replace this with your actual projects
+  // Personal hobby projects
   const projects: Project[] = [
     {
       id: "1",
       title: "Personal Website",
-      description: "iOS-themed personal website built with Next.js, featuring authentic iOS design patterns, PDF resume viewer, and interactive contact information.",
-      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
+      description: "iOS-themed personal portfolio website with authentic design patterns, PDF resume viewer, and interactive components.",
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "React Icons"],
       liveUrl: "https://ousha.me",
       githubUrl: "https://github.com/ktalebian/website",
       featured: true,
     },
     {
       id: "2",
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution with user authentication, payment processing, inventory management, and admin dashboard.",
-      technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "Redis"],
-      githubUrl: "https://github.com/ktalebian/ecommerce",
+      title: "Common Ground",
+      description: "Full-stack event platform with 2000+ users, 1500+ tickets sold, and $50k+ revenue. Built from scratch with AWS deployment pipeline.",
+      technologies: ["TsEd", "React", "AWS", "CloudFront"],
+      liveUrl: "https://joincommonground.com",
+      featured: true,
     },
     {
       id: "3",
-      title: "Real-time Chat Application",
-      description: "Multi-room chat application with real-time messaging, file sharing, and user presence indicators.",
-      technologies: ["Socket.io", "Express", "MongoDB", "JWT", "WebRTC"],
-      githubUrl: "https://github.com/ktalebian/chat-app",
-    },
-    {
-      id: "4",
-      title: "Task Management System",
-      description: "Collaborative project management tool with kanban boards, time tracking, and team collaboration features.",
-      technologies: ["Vue.js", "Django", "PostgreSQL", "Docker", "AWS"],
-      liveUrl: "https://taskmaster.example.com",
-    },
-    {
-      id: "5",
-      title: "Data Visualization Dashboard",
-      description: "Interactive dashboard for analyzing business metrics with real-time data updates and customizable charts.",
-      technologies: ["D3.js", "React", "Python", "FastAPI", "ClickHouse"],
-    },
-    {
-      id: "6",
-      title: "Mobile Fitness Tracker",
-      description: "Cross-platform mobile app for tracking workouts, nutrition, and health metrics with social features.",
-      technologies: ["React Native", "Firebase", "Redux", "Expo"],
+      title: "S&K Cloud Computing",
+      description: "Co-founded cloud computing solution for municipal governments with automatic Excel exporting and calendar syncing capabilities.",
+      technologies: ["AngularJS", "Laravel", "Excel Integration", "Calendar Sync"],
+      featured: false,
     },
   ];
 

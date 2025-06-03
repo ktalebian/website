@@ -18,14 +18,14 @@ interface Project {
   highlights?: string[];
 }
 
-// Same projects data as the main projects page
+// Personal hobby projects
 const projects: Project[] = [
   {
     id: "1",
     title: "Personal Website",
-    description: "iOS-themed personal website built with Next.js, featuring authentic iOS design patterns, PDF resume viewer, and interactive contact information.",
-    longDescription: "A meticulously crafted personal website that replicates the authentic iOS experience down to the smallest details. Features include a Dynamic Island, live time updates, glassmorphism effects, and smooth animations. The site includes a PDF resume viewer modal, interactive contact information with copy-to-clipboard functionality, and a projects showcase. Built with performance and accessibility in mind.",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
+    description: "iOS-themed personal portfolio website with authentic design patterns, PDF resume viewer, and interactive components.",
+    longDescription: "A modern, responsive personal portfolio website that perfectly mimics the iOS interface with glassmorphism effects, smooth animations, and intuitive navigation. Features include a comprehensive dock-based navigation system, PDF resume viewer with download functionality, interactive contact information with copy-to-clipboard features, and a showcase of professional experience and projects. Built with Next.js 14 and optimized for performance and accessibility.",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "React Icons"],
     liveUrl: "https://ousha.me",
     githubUrl: "https://github.com/ktalebian/website",
     featured: true,
@@ -33,101 +33,56 @@ const projects: Project[] = [
     duration: "2 weeks",
     team: "Solo project",
     highlights: [
-      "Pixel-perfect iOS design replication",
-      "Custom PDF viewer integration",
-      "Responsive design with mobile-first approach",
-      "Performance optimized with Next.js 15",
-      "Interactive glassmorphism effects"
+      "Authentic iOS design with glassmorphism and dynamic island",
+      "Interactive PDF resume viewer with download functionality",
+      "Responsive design optimized for all devices",
+      "Copy-to-clipboard contact information",
+      "Smooth page transitions and hover effects"
     ]
   },
   {
     id: "2",
-    title: "E-Commerce Platform",
-    description: "Full-stack e-commerce solution with user authentication, payment processing, inventory management, and admin dashboard.",
-    longDescription: "A comprehensive e-commerce platform built from the ground up with modern web technologies. Features a complete user authentication system, secure payment processing through Stripe, real-time inventory management, and a powerful admin dashboard for store management. The platform includes advanced features like product recommendations, order tracking, and analytics.",
-    technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "Redis"],
-    githubUrl: "https://github.com/ktalebian/ecommerce",
-    category: "Full-Stack Development",
-    duration: "3 months",
-    team: "Team of 4",
+    title: "Common Ground",
+    description: "Full-stack event platform with 2000+ users, 1500+ tickets sold, and $50k+ revenue. Built from scratch with AWS deployment pipeline.",
+    longDescription: "Built a comprehensive event platform from scratch over 2 years that has grown to serve over 2000 users and generated $50k+ in revenue through 1500+ ticket sales. The platform features a complete AWS deployment pipeline, TsEd backend infrastructure, and React frontend distributed via CloudFront. Includes a full backend management system for employees and a dedicated portal for hosts to manage their events and users.",
+    technologies: ["TsEd", "React", "AWS", "CloudFront", "Node.js", "TypeScript"],
+    liveUrl: "https://joincommonground.com",
+    featured: true,
+    category: "Full-Stack Platform",
+    duration: "2 years",
+    team: "Co-Founder",
     highlights: [
-      "Secure payment processing with Stripe",
-      "Real-time inventory synchronization",
-      "Advanced product search and filtering",
-      "Comprehensive admin dashboard",
-      "Automated order fulfillment system"
+      "2000+ active users on the platform",
+      "1500+ tickets sold through the system",
+      "$50k+ revenue generated",
+      "Built entire AWS deployment pipeline from scratch",
+      "TsEd backend with React frontend on CloudFront",
+      "Full backend management system for employees",
+      "Host portal for event and user management",
+      "Scalable architecture handling high traffic loads"
     ]
   },
   {
     id: "3",
-    title: "Real-time Chat Application",
-    description: "Multi-room chat application with real-time messaging, file sharing, and user presence indicators.",
-    longDescription: "A modern real-time chat application supporting multiple chat rooms, direct messaging, and group conversations. Built with WebSocket technology for instant message delivery, includes file sharing capabilities, user presence indicators, message history, and push notifications. Features end-to-end encryption for secure communication.",
-    technologies: ["Socket.io", "Express", "MongoDB", "JWT", "WebRTC"],
-    githubUrl: "https://github.com/ktalebian/chat-app",
-    category: "Real-time Applications",
-    duration: "6 weeks",
-    team: "Solo project",
+    title: "S&K Cloud Computing",
+    description: "Co-founded cloud computing solution for municipal governments with automatic Excel exporting and calendar syncing capabilities.",
+    longDescription: "Co-founded a cloud computing startup focused on providing digital solutions for municipal governments. Working with three customers, most notably a municipality government, with two additional districts showing interest. The platform revolutionized office practices by providing intuitive digital interfaces that eliminated staff learning curves while maintaining familiar workflows.",
+    technologies: ["AngularJS", "Laravel", "Excel Integration", "Calendar Sync"],
+    featured: false,
+    category: "Enterprise Software",
+    duration: "2 years",
+    team: "Co-Founder",
     highlights: [
-      "Real-time messaging with WebSocket",
-      "End-to-end message encryption",
-      "File sharing and media support",
-      "User presence and typing indicators",
-      "Cross-platform compatibility"
+      "Successfully onboarded 3 municipal government customers",
+      "Developed intuitive UX/UI that mimics existing office practices",
+      "Implemented MVW pattern frontend with AngularJS",
+      "Built MVC pattern backend with Laravel",
+      "Created automatic Excel export functionality",
+      "Integrated Google/Apple calendar syncing",
+      "Eliminated staff learning curve through familiar interface design",
+      "Generated interest from 2 additional districts"
     ]
-  },
-  {
-    id: "4",
-    title: "Task Management System",
-    description: "Collaborative project management tool with kanban boards, time tracking, and team collaboration features.",
-    longDescription: "A powerful project management platform designed for agile teams. Features include customizable kanban boards, time tracking, sprint planning, team collaboration tools, and detailed project analytics. The system supports multiple project templates, automated workflows, and integrations with popular development tools.",
-    technologies: ["Vue.js", "Django", "PostgreSQL", "Docker", "AWS"],
-    liveUrl: "https://taskmaster.example.com",
-    category: "Project Management",
-    duration: "4 months",
-    team: "Team of 6",
-    highlights: [
-      "Customizable kanban workflows",
-      "Integrated time tracking and reporting",
-      "Real-time team collaboration",
-      "Sprint planning and backlog management",
-      "Third-party tool integrations"
-    ]
-  },
-  {
-    id: "5",
-    title: "Data Visualization Dashboard",
-    description: "Interactive dashboard for analyzing business metrics with real-time data updates and customizable charts.",
-    longDescription: "An advanced analytics dashboard that transforms complex business data into actionable insights. Features interactive charts, real-time data streaming, customizable widgets, and automated report generation. The platform supports multiple data sources and provides predictive analytics using machine learning algorithms.",
-    technologies: ["D3.js", "React", "Python", "FastAPI", "ClickHouse"],
-    category: "Data Analytics",
-    duration: "8 weeks",
-    team: "Team of 3",
-    highlights: [
-      "Real-time data visualization with D3.js",
-      "Machine learning-powered insights",
-      "Customizable dashboard layouts",
-      "Automated report generation",
-      "Multi-source data integration"
-    ]
-  },
-  {
-    id: "6",
-    title: "Mobile Fitness Tracker",
-    description: "Cross-platform mobile app for tracking workouts, nutrition, and health metrics with social features.",
-    longDescription: "A comprehensive fitness tracking application that helps users monitor their health and fitness goals. Includes workout planning, nutrition tracking, progress visualization, and social features for community motivation. The app integrates with popular fitness devices and provides personalized recommendations based on user data.",
-    technologies: ["React Native", "Firebase", "Redux", "Expo"],
-    category: "Mobile Development",
-    duration: "5 months",
-    team: "Team of 5",
-    highlights: [
-      "Cross-platform mobile compatibility",
-      "Fitness device integrations",
-      "Social features and challenges",
-      "Personalized workout recommendations",
-      "Comprehensive health analytics"
-    ]
-  },
+  }
 ];
 
 export default async function ProjectDetail({ params }: { params: Promise<{ id: string }> }) {
@@ -164,15 +119,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ id: 
           {/* Project Details - Scrollable */}
           <div className="flex-1 overflow-y-auto min-h-0">
             <div className="p-6 space-y-6">
-              {/* Description */}
-              <div>
-                <h3 className="text-black font-medium text-base mb-2">About</h3>
-                <p className="text-gray-700 text-sm leading-relaxed">
-                  {project.longDescription || project.description}
-                </p>
-              </div>
-
-              {/* Project Info */}
+              {/* Basic Info */}
               <div className="grid grid-cols-2 gap-4">
                 {project.category && (
                   <div>
@@ -194,9 +141,17 @@ export default async function ProjectDetail({ params }: { params: Promise<{ id: 
                 )}
               </div>
 
+              {/* Description */}
+              <div>
+                <h3 className="text-black font-medium text-base mb-2">Project Overview</h3>
+                <p className="text-gray-700 text-sm leading-relaxed">
+                  {project.longDescription || project.description}
+                </p>
+              </div>
+
               {/* Technologies */}
               <div>
-                <h3 className="text-black font-medium text-base mb-3">Technologies</h3>
+                <h3 className="text-black font-medium text-base mb-3">Technologies & Tools</h3>
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (
                     <span
@@ -209,7 +164,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ id: 
                 </div>
               </div>
 
-              {/* Highlights */}
+              {/* Key Highlights */}
               {project.highlights && (
                 <div>
                   <h3 className="text-black font-medium text-base mb-3">Key Highlights</h3>

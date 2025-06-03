@@ -17,107 +17,108 @@ interface Experience {
   reportingTo?: string;
 }
 
+// Real work experience data from resume
 const experiences: Experience[] = [
   {
     id: "1",
     company: "Twilio, Inc",
     position: "Principal Engineer",
-    duration: "2021 - Present",
-    location: "San Francisco, CA (Remote)",
-    description: "Leading engineering initiatives and architecting scalable solutions for Twilio's communication platform, serving millions of users worldwide. Responsible for technical strategy, system design, and mentoring engineering teams across the organization.",
+    duration: "03/2023 – present",
+    location: "Vancouver, Canada",
+    description: "Assisted as a 'loan architect' to different teams to help design their new products and help with cross-team collaboration. Designed and built the Twilio Flex special Business Continuity Mode, a degraded fallback system.",
     achievements: [
-      "Led architecture design for new messaging platform handling 10B+ messages/day",
-      "Mentored 15+ engineers across multiple teams and disciplines",
-      "Reduced system latency by 40% through infrastructure optimization",
-      "Established engineering best practices adopted company-wide",
-      "Spearheaded microservices migration reducing deployment time by 60%",
-      "Built real-time analytics platform processing 1TB+ data daily"
+      "Assisted as 'loan architect' to different teams for product design",
+      "Designed and built Twilio Flex Business Continuity Mode",
+      "Cross-team collaboration and architectural guidance"
     ],
-    technologies: ["Node.js", "TypeScript", "AWS", "Kubernetes", "Redis", "PostgreSQL", "Terraform", "GraphQL"],
+    technologies: ["Java", "TypeScript", "Microservices", "System Architecture"],
     current: true,
-    companyUrl: "https://twilio.com",
-    teamSize: "50+ engineers",
-    reportingTo: "VP of Engineering"
+    companyUrl: "https://twilio.com"
   },
   {
     id: "2",
-    company: "Uber Technologies",
-    position: "Senior Software Engineer",
-    duration: "2018 - 2021",
-    location: "San Francisco, CA",
-    description: "Developed critical infrastructure for Uber's marketplace platform, focusing on real-time systems and data processing at massive scale. Worked on the core matching algorithms that connect riders with drivers worldwide.",
+    company: "Twilio, Inc",
+    position: "Principal Engineer - Tech Lead",
+    duration: "01/2022 – 03/2023",
+    location: "Vancouver, Canada",
+    description: "Designing the next generation of Twilio Flex contact-center product in a team of 10 other Tech Leads and 2 Senior Architects. Leading a team of 8 engineers to develop the execution engine of the product using Temporal.",
     achievements: [
-      "Built real-time matching system handling 15M+ rides daily",
-      "Improved driver-rider matching efficiency by 25%",
-      "Led migration of legacy systems to microservices architecture",
-      "Reduced infrastructure costs by $2M annually through optimization",
-      "Implemented surge pricing algorithm increasing driver supply by 30%",
-      "Created monitoring dashboard reducing incident response time by 50%"
+      "Designed next generation Twilio Flex contact-center product",
+      "Led team of 8 engineers developing execution engine using Temporal",
+      "Expected system load: 1,000 step transitions per second (3x increase over existing Studio engine)",
+      "Collaborated with 10 Tech Leads and 2 Senior Architects"
     ],
-    technologies: ["Go", "Python", "Apache Kafka", "Cassandra", "Docker", "gRPC", "Prometheus", "Grafana"],
-    companyUrl: "https://uber.com",
-    teamSize: "12 engineers",
-    reportingTo: "Engineering Manager"
+    technologies: ["Temporal", "Java", "Distributed Systems", "Architecture Design"],
+    companyUrl: "https://twilio.com",
+    teamSize: "8 engineers",
+    reportingTo: "Senior Architect"
   },
   {
     id: "3",
-    company: "Airbnb",
-    position: "Software Engineer",
-    duration: "2016 - 2018",
-    location: "San Francisco, CA",
-    description: "Worked on host and guest experience platforms, building features that enhanced the booking and hosting experience for millions of users. Focused on search, pricing, and trust & safety systems.",
+    company: "Twilio, Inc",
+    position: "Staff Engineer - Tech Lead",
+    duration: "04/2020 – 12/2021",
+    location: "San Francisco, USA",
+    description: "Improved the reliability of Twilio's Flex edge service by reducing the number of incidents from once a week to almost no incidents in over a year. Improved the performance of the edge service.",
     achievements: [
-      "Developed dynamic pricing algorithm increasing host revenue by 18%",
-      "Built automated verification system reducing fraud by 35%",
-      "Created A/B testing framework used across 20+ product teams",
-      "Optimized search ranking algorithm improving booking conversion by 12%",
-      "Implemented machine learning model for host onboarding optimization",
-      "Built real-time notifications system handling 50M+ messages daily"
+      "Reduced incidents from once a week to almost no incidents in over a year",
+      "Single node can perform 1k req/sec, vastly outperforming Twilio API's edge service",
+      "Designed and developed entire stack of Twilio Flex Plugins ecosystem",
+      "Designed standard model of gameday now used throughout Twilio Flex",
+      "Owner of Twilio Flex CDN deployment pipeline"
     ],
-    technologies: ["Ruby on Rails", "React", "MySQL", "Redis", "Elasticsearch", "AWS", "Airflow", "Spark"],
-    companyUrl: "https://airbnb.com",
-    teamSize: "8 engineers",
-    reportingTo: "Senior Engineering Manager"
+    technologies: ["Java", "TypeScript", "CLI", "Edge Computing", "CDN"],
+    companyUrl: "https://twilio.com"
   },
   {
     id: "4",
-    company: "Shopify",
-    position: "Software Developer",
-    duration: "2014 - 2016",
-    location: "Toronto, ON",
-    description: "Contributed to Shopify's e-commerce platform, working on merchant-facing tools and payment processing systems. Helped scale the platform to support millions of merchants worldwide.",
+    company: "Twilio, Inc",
+    position: "Senior Engineer",
+    duration: "01/2018 – 04/2020",
+    location: "San Francisco, USA",
+    description: "A team of 2 engineers developed the first version of the company's Serverless environment (Twilio Functions), handling 500/sec Function invocation. Designed and developed the second version of the Twilio Functions and Assets.",
     achievements: [
-      "Implemented new payment gateway supporting 15+ currencies",
-      "Built inventory management system for enterprise merchants",
-      "Reduced checkout abandonment rate by 22% through UX improvements",
-      "Mentored junior developers and led code review processes",
-      "Created automated testing suite improving deployment confidence",
-      "Optimized database queries reducing page load times by 35%"
+      "Developed first version of Twilio Functions serverless environment",
+      "Handled 500/sec Function invocation with team of 2 engineers",
+      "Designed and developed second version of Twilio Functions and Assets",
+      "Contributed to GAing of Twilio Studio workflow execution engine platform"
     ],
-    technologies: ["Ruby on Rails", "JavaScript", "PostgreSQL", "Redis", "Docker", "Sidekiq", "React"],
-    companyUrl: "https://shopify.com",
-    teamSize: "6 engineers",
-    reportingTo: "Team Lead"
+    technologies: ["Serverless", "Node.js", "JavaScript", "Workflow Engine"],
+    companyUrl: "https://twilio.com",
+    teamSize: "2 engineers"
   },
   {
     id: "5",
-    company: "University of British Columbia",
-    position: "Research Assistant",
-    duration: "2012 - 2014",
-    location: "Vancouver, BC",
-    description: "Conducted research in biomedical engineering, developing computational models for medical device optimization and data analysis. Collaborated with medical professionals on clinical studies and device validation.",
+    company: "Twilio, Inc",
+    position: "Software Engineer",
+    duration: "05/2016 – 01/2018",
+    location: "San Francisco, USA",
+    description: "Developed an API Explorer from the company's internal API definition. Designed, developed and shipped the second and third generations of the companywide debugger platform.",
     achievements: [
-      "Published 3 peer-reviewed papers in biomedical journals",
-      "Developed simulation software for cardiac device testing",
-      "Presented research at 5 international conferences",
-      "Collaborated with medical professionals on clinical studies",
-      "Created data analysis pipeline for clinical trial data",
-      "Won best paper award at IEEE Biomedical Engineering Conference"
+      "Developed API Explorer from internal API definition (running without maintenance since 2017)",
+      "Designed and shipped 2nd and 3rd generations of companywide debugger platform",
+      "Led company transition from jQuery to React application",
+      "Developed first generation deployment pipeline for streamlined frontend development"
     ],
-    technologies: ["MATLAB", "Python", "C++", "LaTeX", "Statistical Analysis", "R", "LabVIEW"],
-    companyUrl: "https://ubc.ca",
-    teamSize: "Research team of 4",
-    reportingTo: "Principal Investigator"
+    technologies: ["JavaScript", "React", "API Design", "Debugging Tools"],
+    companyUrl: "https://twilio.com"
+  },
+  {
+    id: "6",
+    company: "iCracked Inc",
+    position: "Junior Software Engineer",
+    duration: "02/2015 – 05/2016",
+    location: "Redwood City, USA",
+    description: "A team of 3 designed and manufactured an SoC computer from start to finish that includes the battery, WiFi, BLE 4.0, and Qi. Sold out an initial batch of 200 devices in 2 days, generating a revenue of $50,000.",
+    achievements: [
+      "Designed and manufactured SoC computer with battery, WiFi, BLE 4.0, and Qi",
+      "Sold out 200 devices in 2 days, generating $50,000 revenue",
+      "Custom Linux OS boots in 12 seconds (10 seconds faster than Debian)",
+      "Developed dashboard for remote monitoring, OTA updates, user access management",
+      "Built secure tunnelling from local port to public domain"
+    ],
+    technologies: ["Hardware", "Linux", "SoC", "WiFi", "BLE", "Qi Charging", "Dashboard"],
+    teamSize: "3 engineers"
   },
 ];
 

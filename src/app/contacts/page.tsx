@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { FaEnvelope, FaPhone, FaLinkedin, FaGithub, FaMapMarkerAlt, FaExternalLinkAlt } from "react-icons/fa";
+import { FaEnvelope, FaPhone, FaLinkedin, FaGithub, FaMapMarkerAlt, FaExternalLinkAlt, FaAddressBook } from "react-icons/fa";
+import PageHeader from "@/components/PageHeader";
 
 export default function Contacts() {
   const [copied, setCopied] = useState("");
@@ -17,23 +18,13 @@ export default function Contacts() {
     <div className="relative z-10 flex-1 px-6 pt-8">
       <div className="max-w-lg mx-auto">
         <div className="bg-white/60 backdrop-blur-3xl rounded-2xl border border-gray-300/50 shadow-lg overflow-hidden">
-          <div className="p-6 text-center border-b border-gray-300/30">
-            <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden shadow-lg">
-              <Image
-                src="/kousha.webp"
-                alt="Kousha Talebian"
-                width={96}
-                height={96}
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <h2 className="text-black font-semibold text-xl">
-              Kousha Talebian
-            </h2>
-            <p className="text-gray-600 text-sm mt-1">
-              Principal Engineer at Twilio, Inc
-            </p>
-          </div>
+          <PageHeader
+            icon={<FaAddressBook className="w-8 h-8 text-white" />}
+            title="Contact"
+            subtitle="Let's connect and build something amazing"
+            gradientFrom="from-green-500"
+            gradientTo="to-green-600"
+          />
 
           {/* Contact Information */}
           <div className="divide-y divide-gray-300/30">

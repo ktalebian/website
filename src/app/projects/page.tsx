@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { FaExternalLinkAlt, FaGithub, FaChevronRight } from "react-icons/fa";
+import { FaExternalLinkAlt, FaGithub, FaChevronRight, FaFolder } from "react-icons/fa";
+import PageHeader from "@/components/PageHeader";
 
 interface Project {
   id: string;
@@ -48,16 +49,16 @@ export default function Projects() {
       <div className="max-w-lg mx-auto h-full flex flex-col">
         {/* Single App Container */}
         <div className="bg-white/60 backdrop-blur-3xl rounded-2xl border border-gray-300/50 shadow-lg overflow-hidden h-full flex flex-col">
-          {/* App Header */}
-          <div className="p-6 text-center border-b border-gray-300/30 flex-shrink-0">
-            <h1 className="text-black font-semibold text-xl">Projects</h1>
-            <p className="text-gray-600 text-sm mt-1">
-              A collection of my work
-            </p>
-          </div>
-
           {/* Projects List - Scrollable */}
           <div className="flex-1 overflow-y-auto min-h-0">
+            <PageHeader
+              icon={<FaFolder className="w-8 h-8 text-white" />}
+              title="Projects"
+              subtitle="A collection of my work"
+              gradientFrom="from-purple-500"
+              gradientTo="to-purple-600"
+            />
+            
             <div className="divide-y divide-gray-300/30">
               {projects.map((project) => (
                 <div key={project.id} className="p-4 hover:bg-white/30 transition-colors">

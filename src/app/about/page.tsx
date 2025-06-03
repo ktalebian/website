@@ -7,7 +7,9 @@ import {
   FaGlobeAmericas,
   FaCheckCircle,
   FaUtensils,
+  FaUser,
 } from "react-icons/fa";
+import PageHeader from "@/components/PageHeader";
 
 export default function About() {
   return (
@@ -16,26 +18,11 @@ export default function About() {
         <div className="bg-white/60 backdrop-blur-3xl rounded-2xl border border-gray-300/50 shadow-lg overflow-hidden h-full flex flex-col">
           <div className="flex-1 overflow-y-auto min-h-0">
             <div className="p-6 space-y-6">
-              <div className="text-center">
-                <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden shadow-lg">
-                  <Image
-                    src="/kousha.webp"
-                    alt="Kousha Talebian"
-                    width={96}
-                    height={96}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h2 className="text-black font-semibold text-xl mb-2">
-                  Kousha Talebian
-                </h2>
-                <p className="text-gray-700 font-medium text-sm">
-                  Principal Engineer at Twilio, Inc
-                </p>
-              </div>
-
-              {/* Divider */}
-              <div className="-mx-6 border-t border-gray-300/30"></div>
+              <PageHeader
+                image="/kousha.webp"
+                title="Kousha Talebian"
+                subtitle="Principal Engineer at Twilio, Inc"
+              />
 
               <div>
                 <h3 className="text-black font-medium text-base mb-3">

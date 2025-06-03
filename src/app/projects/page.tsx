@@ -80,15 +80,6 @@ export default function Projects() {
                 className="p-4 hover:bg-white/30 transition-colors"
               >
                 <div className="flex items-start gap-4">
-                  {/* Project Icon/Avatar */}
-                  <div className={`w-12 h-12 rounded-xl flex-shrink-0 flex items-center justify-center ${
-                    project.featured ? "bg-gradient-to-br from-blue-500 to-blue-600" : "bg-gradient-to-br from-gray-500 to-gray-600"
-                  }`}>
-                    <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" />
-                    </svg>
-                  </div>
-                  
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 mb-1">
                       <h3 className="text-black font-medium text-base">

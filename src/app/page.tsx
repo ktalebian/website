@@ -135,19 +135,21 @@ export default function Home() {
               </div>
             </Link>
 
-            {/* Mail */}
-            <div className="w-12 h-12 rounded-xl shadow-lg relative cursor-pointer transform transition-all duration-200 hover:scale-110 hover:shadow-xl">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl"></div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <svg
-                  className="w-6 h-6 text-white"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z" />
-                </svg>
+            {/* Experience */}
+            <Link href="/experience">
+              <div className="w-12 h-12 rounded-xl shadow-lg relative cursor-pointer transform transition-all duration-200 hover:scale-110 hover:shadow-xl">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-purple-700 rounded-xl"></div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <svg
+                    className="w-6 h-6 text-white"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path d="M10,2H14A2,2 0 0,1 16,4V6H20A2,2 0 0,1 22,8V19A2,2 0 0,1 20,21H4A2,2 0 0,1 2,19V8A2,2 0 0,1 4,6H8V4A2,2 0 0,1 10,2M14,6V4H10V6H14Z" />
+                  </svg>
+                </div>
               </div>
-            </div>
+            </Link>
 
             {/* Music */}
             <div className="w-12 h-12 rounded-xl shadow-lg relative cursor-pointer transform transition-all duration-200 hover:scale-110 hover:shadow-xl">

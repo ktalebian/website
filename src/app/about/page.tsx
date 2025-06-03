@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import {
   FaMapMarkerAlt,
   FaGlobeAmericas,
@@ -13,11 +14,6 @@ export default function About() {
     <div className="relative z-10 h-full px-6 pt-8 pb-4 flex flex-col">
       <div className="max-w-lg mx-auto h-full flex flex-col">
         <div className="bg-white/60 backdrop-blur-3xl rounded-2xl border border-gray-300/50 shadow-lg overflow-hidden h-full flex flex-col">
-          <div className="p-6 text-center border-b border-gray-300/30 flex-shrink-0">
-            <h1 className="text-black font-semibold text-xl">About Me</h1>
-            <p className="text-gray-600 text-sm mt-1">Get to know me better</p>
-          </div>
-
           <div className="flex-1 overflow-y-auto min-h-0">
             <div className="p-6 space-y-6">
               <div className="text-center">
@@ -33,10 +29,13 @@ export default function About() {
                 <h2 className="text-black font-semibold text-xl mb-2">
                   Kousha Talebian
                 </h2>
-                <p className="text-blue-600 font-medium text-sm">
+                <p className="text-gray-700 font-medium text-sm">
                   Principal Engineer at Twilio, Inc
                 </p>
               </div>
+
+              {/* Divider */}
+              <div className="-mx-6 border-t border-gray-300/30"></div>
 
               <div>
                 <h3 className="text-black font-medium text-base mb-3">
@@ -44,27 +43,59 @@ export default function About() {
                 </h3>
                 <div className="space-y-4 text-gray-700 text-sm leading-relaxed">
                   <p>
-                    Hey there! 👋 I&apos;m Kousha, an Iranian Canadian with a
-                    passion for building technology that makes a difference. My
-                    journey into tech started with a Physics and Biomedical
-                    Engineering background, which gave me a unique perspective
-                    on problem-solving and systems thinking.
+                    Hey there! 👋 I&apos;m Kousha! I&apos;m an Iranian Canadian
+                    who builds technology that actually matters (or at least
+                    tries to).
                   </p>
-
                   <p>
-                    Over the past 10+ years, I&apos;ve had the privilege of
-                    working at some amazing companies like Twilio, Uber, Airbnb,
-                    and Shopify. I love the challenge of scaling systems,
-                    mentoring talented engineers, and architecting solutions
-                    that can handle millions of users.
+                    My journey started in Physics and Biomedical Engineering,
+                    but I quickly realized I craved something faster-paced.
+                    After univeristy, I moved to San Francisco, slept on my
+                    friend&apos;s coach for two weeks until I found my first
+                    job, and I loved fast-pace market software engineering and
+                    San Francisco offered.
                   </p>
-
                   <p>
-                    When I&apos;m not coding, you&apos;ll find me exploring new
-                    places (I&apos;ve visited 35+ countries and counting!),
-                    experimenting in the kitchen, or planning my next adventure.
-                    I believe the best solutions come from diverse experiences
-                    and perspectives.
+                    I actually got into coding in the most unexpected way:{" "}
+                    <Link
+                      href="https://neopets.com"
+                      target="_blank"
+                      className="text-blue-600 hover:text-blue-700 underline hover:no-underline transition-colors"
+                    >
+                      Neopets
+                    </Link>
+                    . Yes, you read that right. My coding career began with
+                    crafting HTML pages for my digital companion, and honestly,
+                    it was love at first{" "}
+                    <code className="px-1.5 py-0.5 bg-gray-200/80 text-gray-700 text-xs rounded font-mono">
+                      div
+                    </code>
+                    . Later in university, I discovered I could fund my entire
+                    four-year university education by building and managing
+                    websites for student clubs. Who knew that pet page skills
+                    would translate into real-world value?
+                  </p>
+                  <p>
+                    These days, when I&apos;m not deep in code, you&apos;ll find
+                    me in my kitchen—which looks more like a gadget graveyard
+                    than a place to cook. I&apos;m passionate about culinary
+                    experimentation and fermentation, though I should mention
+                    I&apos;ve sacrificed more than a few jars to the
+                    fermentation gods (my neighbors can attest to the occasional
+                    explosive sound effects).
+                  </p>{" "}
+                  <p>
+                    I&apos;m also a travel enthusiast with 35+ countries under
+                    my belt, always hunting for new flavors, perspectives, and
+                    the random friends I make in the most unexpected places.
+                  </p>
+                  <p>
+                    Currently, I&apos;m diving deep into AI research,
+                    specifically exploring how to secure Agent-to-Agent
+                    communication.
+                  </p>
+                  <p>
+                    Ready to build something amazing together? Let&apos;s chat!
                   </p>
                 </div>
               </div>
@@ -108,7 +139,7 @@ export default function About() {
                     </div>
                     <div>
                       <p className="text-black font-medium text-sm">
-                        10+ Years Experience
+                        14+ Years Experience
                       </p>
                       <p className="text-gray-600 text-xs">
                         Building scalable solutions

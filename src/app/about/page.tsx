@@ -10,11 +10,12 @@ import {
   FaUser,
 } from "react-icons/fa";
 import PageHeader from "@/components/PageHeader";
+import Tag from "@/components/Tag";
 
 export default function About() {
   return (
     <div className="relative z-10 h-full px-6 pt-8 pb-4 flex flex-col">
-      <div className="max-w-lg mx-auto h-full flex flex-col">
+      <div className="max-w-xl mx-auto h-full flex flex-col">
         <div className="bg-white/60 backdrop-blur-3xl rounded-2xl border border-gray-300/50 shadow-lg overflow-hidden h-full flex flex-col">
           <div className="flex-1 overflow-y-auto min-h-0">
             <div className="p-6 space-y-6">
@@ -166,12 +167,9 @@ export default function About() {
                     "Pilot in Training",
                     "Piano and Music",
                   ].map((interest) => (
-                    <span
-                      key={interest}
-                      className="px-3 py-1.5 bg-blue-100/80 text-blue-800 text-xs rounded-lg font-medium"
-                    >
+                    <Tag key={interest} variant="blue">
                       {interest}
-                    </span>
+                    </Tag>
                   ))}
                 </div>
               </div>

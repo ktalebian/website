@@ -132,7 +132,7 @@ export default async function ExperienceDetail({ params }: { params: Promise<{ i
 
   return (
     <div className="relative z-10 h-full px-6 pt-8 pb-4 flex flex-col">
-      <div className="max-w-lg mx-auto h-full flex flex-col">
+      <div className="max-w-xl mx-auto h-full flex flex-col">
         {/* Single App Container */}
         <div className="bg-white/60 backdrop-blur-3xl rounded-2xl border border-gray-300/50 shadow-lg overflow-hidden h-full flex flex-col">
           {/* App Header */}

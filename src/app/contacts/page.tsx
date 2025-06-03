@@ -16,7 +16,7 @@ export default function Contacts() {
 
   return (
     <div className="relative z-10 flex-1 px-6 pt-8">
-      <div className="max-w-lg mx-auto">
+      <div className="max-w-xl mx-auto">
         <div className="bg-white/60 backdrop-blur-3xl rounded-2xl border border-gray-300/50 shadow-lg overflow-hidden">
           <PageHeader
             icon={<FaAddressBook className="w-8 h-8 text-white" />}

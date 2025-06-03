@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import Image from "next/image";
 
 interface Props {
   icon?: ReactNode;
@@ -22,9 +23,11 @@ export default function PageHeader({
       <div className="p-6 text-center">
         {image ? (
           <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden shadow-lg">
-            <img
+            <Image
               src={image}
               alt={title}
+              width={96}
+              height={96}
               className="w-full h-full object-cover"
             />
           </div>
@@ -38,7 +41,7 @@ export default function PageHeader({
         <h1 className="text-black font-semibold text-xl mb-2">{title}</h1>
         <p className="text-gray-700 font-medium text-sm">{subtitle}</p>
       </div>
-      
+
       {/* Divider */}
       <div className="border-t border-gray-300/30 -mx-6"></div>
     </>

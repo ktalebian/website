@@ -42,7 +42,6 @@ export default function PageHeader({
         <p className="text-gray-700 font-medium text-sm">{subtitle}</p>
       </div>
 
-      {/* Divider */}
       <div className="border-t border-gray-300/30 -mx-6"></div>
     </>
   );

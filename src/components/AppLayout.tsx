@@ -65,7 +65,11 @@ export default function IOSLayout({ children }: IOSLayoutProps) {
         </div>
       </div>
 
-      <div className="flex-1 flex flex-col min-h-0">{children}</div>
+      <div className="flex-1 flex flex-col min-h-0">
+        <div className="max-w-xl mx-auto h-full flex flex-col w-full px-6">
+          {children}
+        </div>
+      </div>
       {pathname !== "/" && (
         <Link href="/">
           <div className="relative z-10 px-6 pb-6 pt-4 cursor-pointer flex-shrink-0">

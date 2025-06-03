@@ -51,11 +51,9 @@ export default function PDFModal({
       onClick={handleBackdropClick}
     >
       <div className="bg-white rounded-2xl shadow-2xl w-full max-w-4xl h-full max-h-[90vh] flex flex-col overflow-hidden">
-        {/* Header */}
         <div className="flex items-center justify-between p-4 border-b border-gray-200">
           <h2 className="text-lg font-semibold text-gray-900">{title}</h2>
           <div className="flex items-center gap-2">
-            {/* Download Button */}
             <button
               onClick={downloadPDF}
               className="p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
@@ -63,7 +61,6 @@ export default function PDFModal({
             >
               <FaDownload className="w-5 h-5" />
             </button>
-            {/* Close Button */}
             <button
               onClick={onCloseAction}
               className="p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
@@ -74,7 +71,6 @@ export default function PDFModal({
           </div>
         </div>
 
-        {/* PDF Viewer */}
         <div className="flex-1 relative">
           <iframe
             src={`${pdfUrl}#toolbar=1&navpanes=1&scrollbar=1&page=1&view=FitH`}

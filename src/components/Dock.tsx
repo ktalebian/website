@@ -18,7 +18,6 @@ export default function Dock() {
     <div className="relative z-10 px-6 pb-6">
       <div className="bg-white/60 backdrop-blur-3xl rounded-2xl p-3 max-w-xl mx-auto border border-gray-300/50 shadow-2xl">
         <div className="flex justify-center items-center gap-2 md:gap-4">
-          {/* About */}
           <Link href="/about">
             <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl shadow-lg relative cursor-pointer transform transition-all duration-200 hover:scale-110 hover:shadow-xl">
               <div className="absolute inset-0 bg-gradient-to-br from-slate-700 to-slate-800 rounded-xl"></div>
@@ -28,7 +27,6 @@ export default function Dock() {
             </div>
           </Link>
 
-          {/* Experience */}
           <Link href="/experience">
             <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl shadow-lg relative cursor-pointer transform transition-all duration-200 hover:scale-110 hover:shadow-xl">
               <div className="absolute inset-0 bg-gradient-to-br from-slate-700 to-slate-800 rounded-xl"></div>
@@ -38,7 +36,6 @@ export default function Dock() {
             </div>
           </Link>
 
-          {/* Projects */}
           <Link href="/projects">
             <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl shadow-lg relative cursor-pointer transform transition-all duration-200 hover:scale-110 hover:shadow-xl">
               <div className="absolute inset-0 bg-gradient-to-br from-slate-700 to-slate-800 rounded-xl"></div>
@@ -48,7 +45,6 @@ export default function Dock() {
             </div>
           </Link>
 
-          {/* Contacts */}
           <Link href="/contacts">
             <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl shadow-lg relative cursor-pointer transform transition-all duration-200 hover:scale-110 hover:shadow-xl">
               <div className="absolute inset-0 bg-gradient-to-br from-slate-700 to-slate-800 rounded-xl"></div>
@@ -58,10 +54,8 @@ export default function Dock() {
             </div>
           </Link>
 
-          {/* Divider */}
           <div className="w-px h-12 bg-gray-400/30 mx-2"></div>
 
-          {/* Resume */}
           <div
             className="w-10 h-10 md:w-12 md:h-12 rounded-xl shadow-lg relative cursor-pointer transform transition-all duration-200 hover:scale-110 hover:shadow-xl block"
             onClick={() => setIsPDFModalOpen(true)}
@@ -72,7 +66,6 @@ export default function Dock() {
             </div>
           </div>
 
-          {/* GitHub */}
           <a
             href="https://github.com/ktalebian"
             target="_blank"
@@ -87,12 +80,10 @@ export default function Dock() {
         </div>
       </div>
 
-      {/* Home Indicator */}
       <div className="flex justify-center mt-2">
         <div className="w-32 h-1 bg-white/60 rounded-full"></div>
       </div>
 
-      {/* PDF Modal */}
       <PDFModal
         isOpen={isPDFModalOpen}
         onCloseAction={() => setIsPDFModalOpen(false)}

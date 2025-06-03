@@ -6,8 +6,8 @@ import { Dock } from "@/components";
 export default function Home() {
   return (
     <div className="flex-1 flex flex-col">
-      <div className="relative z-10 flex-1 px-6 pt-8">
-        <div className="max-w-xl mx-auto mb-8">
+      <div className="relative z-10 flex-1 pt-8">
+        <div className="mb-8">
           <div className="bg-white/60 backdrop-blur-3xl rounded-2xl p-6 border border-gray-300/50 shadow-lg cursor-pointer transform transition-all duration-200 hover:scale-[1.02] hover:shadow-xl">
             <div className="flex items-start gap-4">
               <div className="w-20 h-20 rounded-full shadow-lg flex-shrink-0 overflow-hidden">

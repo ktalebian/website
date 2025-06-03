@@ -8,52 +8,7 @@ import {
   FaFolder,
 } from "react-icons/fa";
 import PageHeader from "@/components/PageHeader";
-
-interface Project {
-  id: string;
-  title: string;
-  description: string;
-  technologies: string[];
-  liveUrl?: string;
-  githubUrl?: string;
-  imageUrl?: string;
-  featured?: boolean;
-}
-
-const projects: Project[] = [
-  {
-    id: "1",
-    title: "Personal Website",
-    description:
-      "iOS-themed personal portfolio website with authentic design patterns, PDF resume viewer, and interactive components.",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "React Icons"],
-    liveUrl: "https://ousha.me",
-    githubUrl: "https://github.com/ktalebian/website",
-    featured: true,
-  },
-  {
-    id: "2",
-    title: "Common Ground",
-    description:
-      "Full-stack event platform with 2000+ users, 1500+ tickets sold, and $50k+ revenue. Built from scratch with AWS deployment pipeline.",
-    technologies: ["TsEd", "React", "AWS", "CloudFront"],
-    liveUrl: "https://joincommonground.com",
-    featured: true,
-  },
-  {
-    id: "3",
-    title: "S&K Cloud Computing",
-    description:
-      "Co-founded cloud computing solution for municipal governments with automatic Excel exporting and calendar syncing capabilities.",
-    technologies: [
-      "AngularJS",
-      "Laravel",
-      "Excel Integration",
-      "Calendar Sync",
-    ],
-    featured: false,
-  },
-];
+import { projects } from "./store";
 
 export default function Projects() {
   return (
@@ -121,7 +76,7 @@ export default function Projects() {
                           className="inline-flex items-center gap-1 px-2 py-1 bg-blue-600 text-white text-xs font-medium rounded hover:bg-blue-700 transition-colors"
                         >
                           <FaExternalLinkAlt className="w-3 h-3" />
-                          Live
+                          View
                         </a>
                       )}
 

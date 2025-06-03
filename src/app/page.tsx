@@ -60,65 +60,12 @@ export default function Home() {
             </div>
           </div>
         </div>
-
-        <div className="grid grid-cols-6 gap-6 max-w-lg mx-auto">
-          <div className="flex flex-col items-center cursor-pointer group">
-            <div className="w-14 h-14 rounded-xl shadow-lg relative transform transition-all duration-200 group-hover:scale-110 group-hover:shadow-xl">
-              <div className="absolute inset-0 bg-gradient-to-br from-green-400 to-green-600 rounded-xl"></div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <svg
-                  className="w-8 h-8 text-white"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4V4c0-1.1-.9-2-2-2z" />
-                </svg>
-              </div>
-            </div>
-            <span className="text-black text-xs mt-1 font-normal">
-              Messages
-            </span>
-          </div>
-
-          {/* App Icon - Settings */}
-          <div className="flex flex-col items-center cursor-pointer group">
-            <div className="w-14 h-14 rounded-xl shadow-lg relative transform transition-all duration-200 group-hover:scale-110 group-hover:shadow-xl">
-              <div className="absolute inset-0 bg-gradient-to-br from-gray-400 to-gray-600 rounded-xl"></div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <svg
-                  className="w-8 h-8 text-white"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61 l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41 h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.59,8.12,5.92,7.63,6.29L5.24,5.33c-0.22-0.08-0.47,0-0.59,0.22L2.74,8.87 C2.62,9.08,2.66,9.34,2.86,9.48l2.03,1.58C4.84,11.36,4.8,11.69,4.8,12s0.02,0.64,0.07,0.94l-2.03,1.58 c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54 c0.05,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96 c0.22,0.08,0.47,0.47,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6 s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z" />
-                </svg>
-              </div>
-            </div>
-            <span className="text-black text-xs mt-1 font-normal">
-              Settings
-            </span>
-          </div>
-        </div>
       </div>
 
       {/* iOS Dock */}
       <div className="relative z-10 px-6 pb-6">
         <div className="bg-white/60 backdrop-blur-3xl rounded-2xl p-3 max-w-lg mx-auto border border-gray-300/50 shadow-2xl">
           <div className="flex justify-center items-center gap-4">
-            {/* Phone */}
-            <div className="w-12 h-12 rounded-xl shadow-lg relative cursor-pointer transform transition-all duration-200 hover:scale-110 hover:shadow-xl">
-              <div className="absolute inset-0 bg-gradient-to-br from-green-400 to-green-600 rounded-xl"></div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <svg
-                  className="w-6 h-6 text-white"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z" />
-                </svg>
-              </div>
-            </div>
-
             {/* Safari - Projects */}
             <Link href="/projects">
               <div className="w-12 h-12 rounded-xl shadow-lg relative cursor-pointer transform transition-all duration-200 hover:scale-110 hover:shadow-xl">
@@ -202,6 +149,25 @@ export default function Home() {
                 </svg>
               </div>
             </div>
+
+            {/* GitHub */}
+            <a
+              href="https://github.com/ktalebian"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-xl shadow-lg relative cursor-pointer transform transition-all duration-200 hover:scale-110 hover:shadow-xl"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 rounded-xl"></div>
+              <div className="absolute inset-0 flex items-center justify-center">
+                <svg
+                  className="w-6 h-6 text-white"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+                </svg>
+              </div>
+            </a>
           </div>
         </div>
 

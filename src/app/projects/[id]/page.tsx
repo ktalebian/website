@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import Link from "next/link";
 
 interface Project {
   id: string;
@@ -142,7 +143,17 @@ export default async function ProjectDetail({ params }: { params: Promise<{ id: 
         {/* Single App Container */}
         <div className="bg-white/60 backdrop-blur-3xl rounded-2xl border border-gray-300/50 shadow-lg overflow-hidden h-full flex flex-col">
           {/* App Header */}
-          <div className="p-6 text-center border-b border-gray-300/30 flex-shrink-0">
+          <div className="relative p-6 text-center border-b border-gray-300/30 flex-shrink-0">
+            {/* Back Button */}
+            <Link 
+              href="/projects"
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 p-2 hover:bg-white/30 rounded-lg transition-colors"
+            >
+              <svg className="w-5 h-5 text-gray-600" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" />
+              </svg>
+            </Link>
+            
             <h1 className="text-black font-semibold text-xl">{project.title}</h1>
             {project.featured && (
               <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800 mt-2">

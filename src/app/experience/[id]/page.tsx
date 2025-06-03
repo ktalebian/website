@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import { FaArrowLeft, FaExternalLinkAlt } from "react-icons/fa";
 
 interface Experience {
   id: string;
@@ -140,9 +141,7 @@ export default async function ExperienceDetail({ params }: { params: Promise<{ i
               href="/experience"
               className="absolute left-4 top-1/2 transform -translate-y-1/2 p-2 hover:bg-white/30 rounded-lg transition-colors"
             >
-              <svg className="w-5 h-5 text-gray-600" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" />
-              </svg>
+              <FaArrowLeft className="w-5 h-5 text-gray-600" />
             </Link>
             
             <h1 className="text-black font-semibold text-xl">{experience.position}</h1>
@@ -226,9 +225,7 @@ export default async function ExperienceDetail({ params }: { params: Promise<{ i
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 w-full px-4 py-3 bg-blue-600 text-white text-sm font-medium rounded-xl hover:bg-blue-700 transition-colors"
                   >
-                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" />
-                    </svg>
+                    <FaExternalLinkAlt className="w-4 h-4" />
                     Visit {experience.company}
                   </a>
                 </div>

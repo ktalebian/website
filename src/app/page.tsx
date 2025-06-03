@@ -1,11 +1,9 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
-import { PDFModal, Dock } from "@/components";
+import { Dock } from "@/components";
 
 export default function Home() {
-  const [isPDFModalOpen, setIsPDFModalOpen] = useState(false);
 
   return (
     <div className="flex-1 flex flex-col">
@@ -62,13 +60,6 @@ export default function Home() {
       </div>
 
       <Dock />
-
-      <PDFModal
-        isOpen={isPDFModalOpen}
-        onCloseAction={() => setIsPDFModalOpen(false)}
-        pdfUrl="/resume.pdf"
-        title="Kousha Talebian - Resume"
-      />
     </div>
   );
 }

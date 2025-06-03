@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { FaDownload, FaTimes } from "react-icons/fa";
 
 interface Props {
   isOpen: boolean;
@@ -60,9 +61,7 @@ export default function PDFModal({
               className="p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
               title="Download PDF"
             >
-              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" />
-              </svg>
+              <FaDownload className="w-5 h-5" />
             </button>
             {/* Close Button */}
             <button
@@ -70,9 +69,7 @@ export default function PDFModal({
               className="p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
               title="Close"
             >
-              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
-              </svg>
+              <FaTimes className="w-5 h-5" />
             </button>
           </div>
         </div>

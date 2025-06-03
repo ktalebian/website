@@ -151,19 +151,21 @@ export default function Home() {
               </div>
             </Link>
 
-            {/* Music */}
-            <div className="w-12 h-12 rounded-xl shadow-lg relative cursor-pointer transform transition-all duration-200 hover:scale-110 hover:shadow-xl">
-              <div className="absolute inset-0 bg-gradient-to-br from-pink-500 to-red-600 rounded-xl"></div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <svg
-                  className="w-6 h-6 text-white"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path d="M12,3V12.26C11.5,12.09 11,12 10.5,12C8.57,12 7,13.57 7,15.5C7,17.43 8.57,19 10.5,19C12.43,19 14,17.43 14,15.5V7H18V3H12Z" />
-                </svg>
+            {/* About */}
+            <Link href="/about">
+              <div className="w-12 h-12 rounded-xl shadow-lg relative cursor-pointer transform transition-all duration-200 hover:scale-110 hover:shadow-xl">
+                <div className="absolute inset-0 bg-gradient-to-br from-teal-500 to-teal-700 rounded-xl"></div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <svg
+                    className="w-6 h-6 text-white"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
+                  </svg>
+                </div>
               </div>
-            </div>
+            </Link>
 
             {/* Contacts */}
             <Link href="/contacts">

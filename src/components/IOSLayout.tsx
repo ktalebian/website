@@ -42,12 +42,12 @@ export default function IOSLayout({ children }: IOSLayoutProps) {
   }, []);
 
   return (
-    <div className="bg-gray-100 min-h-screen flex flex-col relative overflow-hidden">
+    <div className="bg-gray-100 h-screen flex flex-col relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-gray-100 to-gray-300"></div>
 
       <div className="absolute top-2 left-1/2 transform -translate-x-1/2 w-32 h-9 bg-black rounded-full z-10"></div>
 
-      <div className="relative z-20 flex justify-between items-center px-6 pt-4 pb-1 text-black text-sm font-semibold">
+      <div className="relative z-20 flex justify-between items-center px-6 pt-4 pb-1 text-black text-sm font-semibold flex-shrink-0">
         <div className="font-bold text-base tracking-tight">{currentTime}</div>
         <div className="flex items-center gap-1">
           <div className="flex gap-0.5 items-end">
@@ -65,10 +65,10 @@ export default function IOSLayout({ children }: IOSLayoutProps) {
         </div>
       </div>
 
-      <div className="flex-1 flex flex-col">{children}</div>
+      <div className="flex-1 flex flex-col min-h-0">{children}</div>
       {pathname !== "/" && (
         <Link href="/">
-          <div className="relative z-10 px-6 pb-6 pt-4 cursor-pointer">
+          <div className="relative z-10 px-6 pb-6 pt-4 cursor-pointer flex-shrink-0">
             <div className="flex justify-center">
               <div className="w-32 h-1 bg-black/60 rounded-full hover:bg-black/80 transition-colors"></div>
             </div>

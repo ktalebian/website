@@ -119,8 +119,9 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Safari */}
-            <div className="w-12 h-12 rounded-xl shadow-lg relative cursor-pointer transform transition-all duration-200 hover:scale-110 hover:shadow-xl">
+            {/* Safari - Projects */}
+            <Link href="/projects">
+              <div className="w-12 h-12 rounded-xl shadow-lg relative cursor-pointer transform transition-all duration-200 hover:scale-110 hover:shadow-xl">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl"></div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <svg
@@ -131,7 +132,8 @@ export default function Home() {
                   <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M12,6A6,6 0 0,0 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12A6,6 0 0,0 12,6M8,12L12,8L16,12L12,16L8,12Z" />
                 </svg>
               </div>
-            </div>
+              </div>
+            </Link>
 
             {/* Mail */}
             <div className="w-12 h-12 rounded-xl shadow-lg relative cursor-pointer transform transition-all duration-200 hover:scale-110 hover:shadow-xl">

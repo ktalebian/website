@@ -1,8 +1,10 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { FaMapMarkerAlt, FaChevronRight, FaBriefcase } from "react-icons/fa";
 import PageHeader from "@/components/PageHeader";
+import Tag from "@/components/Tag";
 import { experiences } from "./store";
 
 export default function Experience() {
@@ -23,6 +25,14 @@ export default function Experience() {
               <Link key={experience.id} href={`/experience/${experience.id}`}>
                 <div className="p-4 hover:bg-white/30 transition-colors cursor-pointer">
                   <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-lg overflow-hidden relative">
+                      <Image
+                        src={experience.companyLogo}
+                        alt={`${experience.company} logo`}
+                        fill
+                        className="object-contain p-1"
+                      />
+                    </div>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2 mb-1">
                         <h3 className="text-black font-medium text-base">
@@ -36,7 +46,7 @@ export default function Experience() {
                       </div>
 
                       <div className="flex items-center gap-2 mb-2">
-                        <span className="text-blue-600 font-medium text-sm">
+                        <span className="text-gray-700 font-medium text-sm">
                           {experience.company}
                         </span>
                         <span className="text-gray-400 text-xs">•</span>
@@ -50,7 +60,7 @@ export default function Experience() {
                       </p>
 
                       <div className="flex items-center gap-1 mb-3">
-                        <FaMapMarkerAlt className="w-3 h-3 text-gray-500" />
+                        <FaMapMarkerAlt className="w-3 h-3 text-red-500" />
                         <span className="text-gray-500 text-xs">
                           {experience.location}
                         </span>
@@ -58,17 +68,14 @@ export default function Experience() {
 
                       <div className="flex flex-wrap gap-1">
                         {experience.technologies.slice(0, 3).map((tech) => (
-                          <span
-                            key={tech}
-                            className="px-2 py-0.5 bg-gray-200/60 text-gray-700 text-xs rounded font-medium"
-                          >
+                          <Tag key={tech} variant="blue">
                             {tech}
-                          </span>
+                          </Tag>
                         ))}
                         {experience.technologies.length > 3 && (
-                          <span className="px-2 py-0.5 bg-gray-200/60 text-gray-500 text-xs rounded font-medium">
+                          <Tag variant="gray">
                             +{experience.technologies.length - 3}
-                          </span>
+                          </Tag>
                         )}
                       </div>
                     </div>

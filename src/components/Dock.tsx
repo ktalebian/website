@@ -60,7 +60,7 @@ export default function Dock() {
             className="w-10 h-10 md:w-12 md:h-12 rounded-xl shadow-lg relative cursor-pointer transform transition-all duration-200 hover:scale-110 hover:shadow-xl block"
             onClick={() => setIsPDFModalOpen(true)}
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-red-500 to-red-700 rounded-xl"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl"></div>
             <div className="absolute inset-0 flex items-center justify-center">
               <FaFileAlt className="w-5 h-5 md:w-6 md:h-6 text-white" />
             </div>

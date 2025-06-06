@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { FaArrowLeft, FaExternalLinkAlt } from "react-icons/fa";
 import { experiences } from "../store";
 
@@ -25,6 +26,15 @@ export default async function ExperienceDetail({ params }: Props) {
           >
             <FaArrowLeft className="w-5 h-5 text-gray-600" />
           </Link>
+
+          <div className="mx-auto w-20 h-20 rounded-xl overflow-hidden mb-4 relative">
+            <Image
+              src={experience.companyLogo}
+              alt={`${experience.company} logo`}
+              fill
+              className="object-contain p-2"
+            />
+          </div>
 
           <h1 className="text-black font-semibold text-xl">
             {experience.position}
@@ -96,7 +106,7 @@ export default async function ExperienceDetail({ params }: Props) {
               <ul className="space-y-2">
                 {experience.achievements.map((achievement, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-1.5 h-1.5 bg-gray-400 rounded-full mt-2 flex-shrink-0"></div>
                     <span className="text-gray-700 text-sm leading-relaxed">
                       {achievement}
                     </span>

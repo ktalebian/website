@@ -8,6 +8,7 @@ import {
   FaFolder,
 } from "react-icons/fa";
 import PageHeader from "@/components/PageHeader";
+import Tag from "@/components/Tag";
 import { projects } from "./store";
 
 export default function Projects() {
@@ -53,17 +54,14 @@ export default function Projects() {
 
                     <div className="flex flex-wrap gap-1 mb-3">
                       {project.technologies.slice(0, 3).map((tech) => (
-                        <span
-                          key={tech}
-                          className="px-2 py-0.5 bg-gray-200/60 text-gray-700 text-xs rounded font-medium"
-                        >
+                        <Tag key={tech} variant="blue">
                           {tech}
-                        </span>
+                        </Tag>
                       ))}
                       {project.technologies.length > 3 && (
-                        <span className="px-2 py-0.5 bg-gray-200/60 text-gray-500 text-xs rounded font-medium">
+                        <Tag variant="gray">
                           +{project.technologies.length - 3}
-                        </span>
+                        </Tag>
                       )}
                     </div>
 

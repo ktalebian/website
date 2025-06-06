@@ -102,7 +102,7 @@ export default async function ProjectDetail({ params }: Props) {
                 <ul className="space-y-2">
                   {project.highlights.map((highlight, index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                      <div className="w-1.5 h-1.5 bg-gray-400 rounded-full mt-2 flex-shrink-0"></div>
                       <span className="text-gray-700 text-sm leading-relaxed">
                         {highlight}
                       </span>
@@ -121,7 +121,7 @@ export default async function ProjectDetail({ params }: Props) {
                   className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 bg-blue-600 text-white text-sm font-medium rounded-xl hover:bg-blue-700 transition-colors"
                 >
                   <FaExternalLinkAlt className="w-4 h-4" />
-                  View Live Demo
+                  Website
                 </a>
               )}
 
@@ -133,7 +133,7 @@ export default async function ProjectDetail({ params }: Props) {
                   className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 bg-gray-800 text-white text-sm font-medium rounded-xl hover:bg-gray-900 transition-colors"
                 >
                   <FaGithub className="w-4 h-4" />
-                  View Source Code
+                  Source Code
                 </a>
               )}
             </div>

@@ -42,7 +42,7 @@ export default function IOSLayout({ children }: IOSLayoutProps) {
   }, []);
 
   return (
-    <div className="bg-gray-100 h-screen flex flex-col relative overflow-hidden">
+    <div className="bg-gray-100 h-[100dvh] flex flex-col relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-gray-100 to-gray-300"></div>
 
       <div className="absolute top-2 left-1/2 transform -translate-x-1/2 w-32 h-9 bg-black rounded-full z-10"></div>

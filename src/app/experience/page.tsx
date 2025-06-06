@@ -18,6 +18,7 @@ export default function Experience() {
             subtitle="My professional journey"
             gradientFrom="from-blue-500"
             gradientTo="to-blue-600"
+            backUrl="/"
           />
 
           <div className="divide-y divide-gray-300/30">

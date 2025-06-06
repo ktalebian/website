@@ -30,6 +30,7 @@ export default function Contacts() {
           subtitle="Let's connect and build something amazing"
           gradientFrom="from-green-500"
           gradientTo="to-green-600"
+          backUrl="/"
         />
 
         <div className="divide-y divide-gray-300/30">

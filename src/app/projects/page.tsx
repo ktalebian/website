@@ -22,6 +22,7 @@ export default function Projects() {
             subtitle="A collection of my work"
             gradientFrom="from-purple-500"
             gradientTo="to-purple-600"
+            backUrl="/"
           />
 
           <div className="divide-y divide-gray-300/30">

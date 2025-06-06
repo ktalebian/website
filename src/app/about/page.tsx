@@ -15,12 +15,13 @@ export default function About() {
     <div className="relative z-10 h-full pt-8 pb-4 flex flex-col">
       <div className="bg-white/60 backdrop-blur-3xl rounded-2xl border border-gray-300/50 shadow-lg overflow-hidden h-full flex flex-col">
         <div className="flex-1 overflow-y-auto min-h-0">
+          <PageHeader
+            image="/kousha.webp"
+            title="Kousha Talebian"
+            subtitle="Principal Engineer at Twilio"
+            backUrl="/"
+          />
           <div className="p-6 space-y-6">
-            <PageHeader
-              image="/kousha.webp"
-              title="Kousha Talebian"
-              subtitle="Principal Engineer at Twilio, Inc"
-            />
 
             <div>
               <h3 className="text-black font-medium text-base mb-3">

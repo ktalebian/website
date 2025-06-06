@@ -27,7 +27,7 @@ export default function Dock() {
             </div>
           </Link>
 
-          <Link href="/experience">
+          <Link href="/experiences">
             <div className="w-11 h-11 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-xl shadow-lg relative cursor-pointer transform transition-all duration-200 hover:scale-110 hover:shadow-xl">
               <div className="absolute inset-0 bg-gradient-to-br from-slate-700 to-slate-800 rounded-xl"></div>
               <div className="absolute inset-0 flex items-center justify-center">

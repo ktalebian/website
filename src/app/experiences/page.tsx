@@ -7,14 +7,14 @@ import PageHeader from "@/components/PageHeader";
 import Tag from "@/components/Tag";
 import { experiences } from "./store";
 
-export default function Experience() {
+export default function Experiences() {
   return (
     <div className="relative z-10 h-full pt-8 pb-4 flex flex-col">
       <div className="bg-white/60 backdrop-blur-3xl rounded-2xl border border-gray-300/50 shadow-lg overflow-hidden h-full flex flex-col">
         <div className="flex-1 overflow-y-auto min-h-0">
           <PageHeader
             icon={<FaBriefcase className="w-8 h-8 text-white" />}
-            title="Experience"
+            title="Experiences"
             subtitle="My professional journey"
             gradientFrom="from-blue-500"
             gradientTo="to-blue-600"
@@ -23,7 +23,7 @@ export default function Experience() {
 
           <div className="divide-y divide-gray-300/30">
             {experiences.map((experience) => (
-              <Link key={experience.id} href={`/experience/${experience.id}`}>
+              <Link key={experience.id} href={`/experiences/${experience.id}`}>
                 <div className="p-4 hover:bg-white/30 transition-colors cursor-pointer">
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0 w-12 h-12 rounded-lg overflow-hidden relative">

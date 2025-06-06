@@ -21,7 +21,7 @@ export default async function ExperienceDetail({ params }: Props) {
       <div className="bg-white/60 backdrop-blur-3xl rounded-2xl border border-gray-300/50 shadow-lg overflow-hidden h-full flex flex-col">
         <div className="relative p-6 text-center border-b border-gray-300/30 flex-shrink-0">
           <Link
-            href="/experience"
+            href="/experiences"
             className="absolute left-4 top-1/2 transform -translate-y-1/2 p-2 hover:bg-white/30 rounded-lg transition-colors"
           >
             <FaArrowLeft className="w-5 h-5 text-gray-600" />

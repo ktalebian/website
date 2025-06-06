@@ -27,7 +27,7 @@ export default function Home() {
                 <p className="text-gray-700 text-sm mt-2 leading-relaxed">
                   Hey there! 👋 I&apos;m Kousha Talebian, an Iranian Canadian
                   with a Physics and Biomedical Engineering background.
-                  I&apos;ve been coding for 14+ years and love building
+                  I&apos;ve been coding for 15+ years and love building
                   solutions that work. I love to travel (35+ countries) and cook
                   in the kitchen. Excited to share projects I&apos;ve been
                   working on, and to connect with other tinkerers.

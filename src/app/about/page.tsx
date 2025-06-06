@@ -123,7 +123,7 @@ export default function About() {
                   </div>
                   <div>
                     <p className="text-black font-medium text-sm">
-                      14+ Years Experience
+                      15+ Years Experience
                     </p>
                     <p className="text-gray-600 text-xs">
                       Building scalable solutions
@@ -170,7 +170,7 @@ export default function About() {
               </div>
             </div>
 
-            <div className="p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl border border-blue-200/50">
+            {/* <div className="p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl border border-blue-200/50">
               <div className="flex items-start gap-3">
                 <div className="text-blue-600 text-lg">💡</div>
                 <div>
@@ -184,7 +184,7 @@ export default function About() {
                   </p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

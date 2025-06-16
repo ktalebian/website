@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { Metadata } from "next";
 import Link from "next/link";
 import { FaArrowLeft, FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { projects } from "../store";
@@ -6,6 +7,44 @@ import { projects } from "../store";
 type Props = {
   params: Promise<{ id: string }>;
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { id } = await params;
+  const project = projects.find((p) => p.id === id);
+
+  if (!project) {
+    return { title: "Project Not Found" };
+  }
+
+  return {
+    title: `${project.title} - Project by Kousha Talebian`,
+    description: project.longDescription || project.description,
+    keywords: [...project.technologies, "Kousha Talebian", "project"],
+    openGraph: {
+      title: `${project.title} - Kousha Talebian`,
+      description: project.longDescription || project.description,
+      url: `https://koushatalebian.com/projects/${id}`,
+      type: "article",
+      images: [
+        {
+          url: project.imageUrl || "https://koushatalebian.com/kousha.webp",
+          width: 1200,
+          height: 630,
+          alt: project.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${project.title} - Kousha Talebian`,
+      description: project.longDescription || project.description,
+      images: [project.imageUrl || "https://koushatalebian.com/kousha.webp"],
+    },
+    alternates: {
+      canonical: `https://koushatalebian.com/${id}`,
+    },
+  };
+}
 
 export default async function ProjectDetail({ params }: Props) {
   const { id } = await params;

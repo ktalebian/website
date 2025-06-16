@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import {
   FaExternalLinkAlt,
@@ -10,6 +8,23 @@ import {
 import PageHeader from "@/components/PageHeader";
 import Tag from "@/components/Tag";
 import { projects } from "./store";
+
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Projects & Portfolio",
+  description:
+    "Explore Kousha Talebian's projects including Common Ground (2,000+ users, $50k+ revenue), personal website, and cloud computing solutions for municipal governments.",
+  openGraph: {
+    title: "Kousha Talebian - Projects & Portfolio",
+    description:
+      "Explore projects including Common Ground platform and cloud computing solutions.",
+    url: "https://koushatalebian.com/projects",
+  },
+  alternates: {
+    canonical: "https://koushatalebian.com/projects",
+  },
+};
 
 export default function Projects() {
   return (

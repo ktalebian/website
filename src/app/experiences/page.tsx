@@ -1,11 +1,26 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
 import { FaMapMarkerAlt, FaChevronRight, FaBriefcase } from "react-icons/fa";
 import PageHeader from "@/components/PageHeader";
 import Tag from "@/components/Tag";
 import { experiences } from "./store";
+
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Professional Experience",
+  description:
+    "Kousha Talebian's professional journey from Junior Software Engineer to Principal Engineer at Twilio. 15+ years of experience in software development and system architecture.",
+  openGraph: {
+    title: "Kousha Talebian - Professional Experience",
+    description:
+      "Professional journey from Junior Software Engineer to Principal Engineer at Twilio.",
+    url: "https://koushatalebian.com/experiences",
+  },
+  alternates: {
+    canonical: "https://koushatalebian.com/experiences",
+  },
+};
 
 export default function Experiences() {
   return (

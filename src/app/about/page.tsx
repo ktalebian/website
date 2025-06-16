@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import {
   FaMapMarkerAlt,
@@ -9,6 +7,22 @@ import {
 } from "react-icons/fa";
 import PageHeader from "@/components/PageHeader";
 import Tag from "@/components/Tag";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Kousha Talebian",
+  description:
+    "Learn about Kousha Talebian, Principal Engineer at Twilio with 15+ years of experience. Iranian Canadian developer passionate about travel, cooking, and building innovative solutions.",
+  openGraph: {
+    title: "About Kousha Talebian",
+    description:
+      "Learn about Kousha Talebian, Principal Engineer at Twilio with 15+ years of experience.",
+    url: "https://koushatalebian.com/about",
+  },
+  alternates: {
+    canonical: "https://koushatalebian.com/about",
+  },
+};
 
 export default function About() {
   return (
@@ -22,7 +36,6 @@ export default function About() {
             backUrl="/"
           />
           <div className="p-6 space-y-6">
-
             <div>
               <h3 className="text-black font-medium text-base mb-3">
                 My Story

@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { FaArrowLeft, FaExternalLinkAlt } from "react-icons/fa";
@@ -7,6 +8,30 @@ import { experiences } from "../store";
 type Props = {
   params: Promise<{ id: string }>;
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { id } = await params;
+  const experience = experiences.find((exp) => exp.id === id);
+
+  if (!experience) {
+    return {
+      title: "Experience Not Found",
+    };
+  }
+
+  return {
+    title: `${experience.position} at ${experience.company}`,
+    description: `${experience.description} Technologies: ${experience.technologies.join(", ")}`,
+    openGraph: {
+      title: `${experience.position} at ${experience.company}`,
+      description: experience.description,
+      url: `https://koushatalebian.com/experiences/${id}`,
+    },
+    alternates: {
+      canonical: `https://koushatalebian.com/${id}`,
+    },
+  };
+}
 
 export default async function ExperienceDetail({ params }: Props) {
   const { id } = await params;

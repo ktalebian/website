@@ -51,12 +51,21 @@ export const metadata: Metadata = {
     siteName: "Kousha Talebian",
     images: [
       {
-        url: "https://koushatalebian.com/kousha.webp", // Your existing image
+        url: "https://koushatalebian.com/kousha.webp",
         width: 400,
         height: 400,
-        alt: "Kousha Talebian - Principal Engineer",
+        alt: "Kousha Talebian - Principal Engineer at Twilio",
+        type: "image/webp",
       },
     ],
+  },
+
+  twitter: {
+    card: "summary",
+    title: "Kousha Talebian - Principal Engineer at Twilio",
+    description:
+      "Principal Engineer at Twilio specializing in AI, LLMs, and scalable systems.",
+    images: ["https://koushatalebian.com/kousha.webp"],
   },
 
   robots: {
@@ -121,7 +130,13 @@ export default function RootLayout({
               "@type": "Person",
               name: "Kousha Talebian",
               url: "https://koushatalebian.com",
-              image: "https://koushatalebian.com/kousha.webp",
+              image: {
+                "@type": "ImageObject",
+                url: "https://koushatalebian.com/kousha.webp",
+                width: 400,
+                height: 400,
+                caption: "Kousha Talebian - Principal Engineer at Twilio",
+              },
               jobTitle: "Principal Engineer",
               worksFor: {
                 "@type": "Organization",

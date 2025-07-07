@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Dock } from "@/components";
+import { Dock, ProjectsWidget } from "@/components";
 
 export default function Home() {
   return (
@@ -54,6 +54,8 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        <ProjectsWidget />
       </div>
 
       <Dock />

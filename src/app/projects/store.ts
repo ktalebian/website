@@ -16,6 +16,20 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "resume-builder",
+    title: "Resume Builder",
+    description: "A web application for building professional resumes.",
+    longDescription:
+      "A web application for building professional resumes. My personal resume on this website is built using this tool.",
+    technologies: ["React", "TypeScript", "Tailwind CSS"],
+    liveUrl: "https://www.koushatalebian.com/public/resume.pdf",
+    githubUrl: "https://github.com/ktalebian/resume-builder",
+    featured: false,
+    category: "Web Development",
+    duration: "1 day",
+    team: "Solo project",
+  },
+  {
     id: "personal-website",
     title: "Personal Website",
     description: "iOS-themed personal portfolio website.",

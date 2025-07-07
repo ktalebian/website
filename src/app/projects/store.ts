@@ -16,6 +16,19 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "twilio-signature-cli",
+    title: "Twilio Signature CLI",
+    description: "A command-line tool for generating Twilio signatures.",
+    longDescription:
+      "A command-line tool for generating Twilio signatures. This tool is useful for developers who need to generate signatures for Twilio API requests.",
+    technologies: ["Node.js", "TypeScript"],
+    githubUrl: "https://github.com/ktalebian/twilio-signature-cli",
+    featured: false,
+    category: "Command-Line Tools",
+    duration: "1 day",
+    team: "Solo project",
+  },
+  {
     id: "resume-builder",
     title: "Resume Builder",
     description: "A web application for building professional resumes.",

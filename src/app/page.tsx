@@ -55,7 +55,9 @@ export default function Home() {
           </div>
         </div>
 
-        <ProjectsWidget />
+        <div className="hidden md:block">
+          <ProjectsWidget />
+        </div>
       </div>
 
       <Dock />
